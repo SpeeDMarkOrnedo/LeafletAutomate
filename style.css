@@ -1,0 +1,28 @@
+.editable-text {
+    position: absolute;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    color: #1f6bcedc;
+    background: transparent;
+    outline: none;
+    white-space: nowrap;
+    cursor: text;
+  }
+
+  .user-image {
+    position: absolute;
+    width: 300px;
+    cursor: grab;
+    border: #f4c726e1 solid 5px;
+  }
+  .editable-text.selected {
+    outline: 2px dashed blue;
+  }
+  .user-image.selected {
+    outline: 3px dashed red;
+  }
+
+  #controls {
+    margin: 20px 0;
+    font-family: sans-serif;
+  }

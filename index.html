@@ -3,34 +3,11 @@
   <head>
     <title>MCGI Leaflet Generator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <style>
-      .editable-text {
-        position: absolute;
-        font-weight: 700;
-        font-family: Montserrat, sans-serif;
-        color: #1f6bcedc;
-        background: transparent;
-        outline: none;
-        white-space: nowrap;
-        cursor: text;
-      }
-
-      #controls {
-        margin: 20px 0;
-        font-family: sans-serif;
-      }
-
-      #controls label {
-        margin-right: 5px;
-      }
-
-      #controls input,
-      #controls select {
-        margin-right: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- CONTROLS -->
     <div id="controls">
       <label>Font Size:</label>
       <input type="range" id="fontSize" min="20" max="120" value="57" />
@@ -42,10 +19,19 @@
         <option value="right">Right</option>
       </select>
 
-      <label>Width:</label>
+      <label>Text Width:</label>
       <input type="range" id="textWidth" min="200" max="1000" value="500" />
-      <button onclick="downloadImage()">Download</button>
+
+      <br /><br />
+
+      <label>Upload Image:</label>
+      <input type="file" id="imageUpload" accept="image/*" />
+
+      <label>Image Size:</label>
+      <input type="range" id="imageSize" min="100" max="1000" value="300" />
     </div>
+
+    <!-- CANVAS -->
 
     <div
       id="capture"
@@ -128,53 +114,8 @@
     </div>
 
     <br />
+    <button onclick="downloadImage()">Download</button>
 
-    <script>
-      // Select all editable text elements
-      const texts = document.querySelectorAll(".editable-text");
-      let selectedText = null;
-
-      // Click to select a text element
-      texts.forEach((el) => {
-        el.addEventListener("click", () => {
-          selectedText = el;
-        });
-      });
-
-      // Font size control
-      document
-        .getElementById("fontSize")
-        .addEventListener("input", function () {
-          if (selectedText) selectedText.style.fontSize = this.value + "px";
-        });
-
-      // Text alignment control
-      document
-        .getElementById("textAlign")
-        .addEventListener("change", function () {
-          if (selectedText) selectedText.style.textAlign = this.value;
-        });
-
-      // Width control (wrap text)
-      document
-        .getElementById("textWidth")
-        .addEventListener("input", function () {
-          if (selectedText) {
-            selectedText.style.width = this.value + "px";
-            selectedText.style.whiteSpace = "normal";
-          }
-        });
-
-      // Download image
-      function downloadImage() {
-        const element = document.getElementById("capture");
-        html2canvas(element, { useCORS: true, scale: 2 }).then((canvas) => {
-          const link = document.createElement("a");
-          link.download = "MCGI_leaflet.png";
-          link.href = canvas.toDataURL();
-          link.click();
-        });
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
