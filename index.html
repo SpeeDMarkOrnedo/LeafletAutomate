@@ -31,93 +31,100 @@
 
       <label>Image Size:</label>
       <input type="range" id="imageSize" min="100" max="1000" value="300" />
+      <label>Canvas Zoom:</label>
+      <input
+        type="range"
+        id="zoomControl"
+        min="0.2"
+        max="2"
+        step="0.1"
+        value="1"
+      />
+      <span id="zoomValue">100%</span>
       <button onclick="downloadImage()">Download</button>
     </div>
-
     <!-- CANVAS -->
+    <div id="canvasWrapper">
+      <div
+        id="capture"
+        style="
+          position: relative;
+          width: 3000px;
+          height: 2000px;
+          background-image: url('MI_Template2026.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <!-- Editable date 1 -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 491px; left: 649px; font-size: 57px"
+        >
+          JANUARY 1, 2026
+        </div>
 
-    <div
-      id="capture"
-      style="
-        position: relative;
-        width: 3000px;
-        height: 2000px;
-        background-image: url('MI_Template2026.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      "
-    >
-      <!-- Editable date 1 -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 491px; left: 649px; font-size: 57px"
-      >
-        JANUARY 1, 2026
-      </div>
+        <!-- Editable date 2 -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 496px; left: 2159px; font-size: 57px"
+        >
+          JANUARY 1, 2026
+        </div>
+        <!-- Editable Locale Location 1 -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 1065px; left: 780px; font-size: 30px"
+        >
+          PINAMALAYAN, ORIENTAL MINDORO
+        </div>
+        <!-- Editable Locale Location 2 -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 1065px; left: 2300px; font-size: 30px"
+        >
+          PINAMALAYAN, ORIENTAL MINDORO
+        </div>
 
-      <!-- Editable date 2 -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 496px; left: 2159px; font-size: 57px"
-      >
-        JANUARY 1, 2026
-      </div>
-      <!-- Editable Locale Location 1 -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 1065px; left: 780px; font-size: 30px"
-      >
-        PINAMALAYAN, ORIENTAL MINDORO
-      </div>
-      <!-- Editable Locale Location 2 -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 1065px; left: 2300px; font-size: 30px"
-      >
-        PINAMALAYAN, ORIENTAL MINDORO
-      </div>
-
-      <!-- Editable Contact Person -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 1225px; left: 1050px; font-size: 30px"
-      >
-        Juan Dela Cruz
-      </div>
-      <!-- Editable Contact Person -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 1222px; left: 2570px; font-size: 30px"
-      >
-        Juan Dela Cruz
-      </div>
-      <!-- Editable Contact Number -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 1265px; left: 2570px; font-size: 30px"
-      >
-        09123456789
-      </div>
-      <!-- Editable Contact Number -->
-      <div
-        contenteditable="true"
-        class="editable-text"
-        style="top: 1265px; left: 1070px; font-size: 30px"
-      >
-        09123456789
+        <!-- Editable Contact Person -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 1225px; left: 1050px; font-size: 30px"
+        >
+          Juan Dela Cruz
+        </div>
+        <!-- Editable Contact Person -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 1222px; left: 2570px; font-size: 30px"
+        >
+          Juan Dela Cruz
+        </div>
+        <!-- Editable Contact Number -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 1265px; left: 2570px; font-size: 30px"
+        >
+          09123456789
+        </div>
+        <!-- Editable Contact Number -->
+        <div
+          contenteditable="true"
+          class="editable-text"
+          style="top: 1265px; left: 1070px; font-size: 30px"
+        >
+          09123456789
+        </div>
       </div>
     </div>
-
-    <br />
-
     <script src="script.js"></script>
   </body>
 </html>

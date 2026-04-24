@@ -223,3 +223,14 @@ function downloadImage() {
     link.click();
   });
 }
+
+const zoomControl = document.getElementById("zoomControl");
+const capture = document.getElementById("capture");
+const zoomValue = document.getElementById("zoomValue");
+
+zoomControl.addEventListener("input", () => {
+  const scale = zoomControl.value;
+
+  capture.style.transform = `scale(${scale})`;
+  zoomValue.textContent = Math.round(scale * 100) + "%";
+});
