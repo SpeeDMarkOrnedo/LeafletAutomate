@@ -9,6 +9,8 @@
   <body>
     <!-- CONTROLS -->
     <div id="controls">
+      <h2>MCGI Leaflet Generator</h2>
+      <h2>Editor Panel</h2>
       <label>Font Size:</label>
       <input type="range" id="fontSize" min="20" max="120" value="57" />
 
@@ -29,6 +31,7 @@
 
       <label>Image Size:</label>
       <input type="range" id="imageSize" min="100" max="1000" value="300" />
+      <button onclick="downloadImage()">Download</button>
     </div>
 
     <!-- CANVAS -->
@@ -114,7 +117,6 @@
     </div>
 
     <br />
-    <button onclick="downloadImage()">Download</button>
 
     <script src="script.js"></script>
   </body>
