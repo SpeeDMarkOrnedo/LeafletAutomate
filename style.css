@@ -122,3 +122,55 @@ body {
   transform-origin: top left;
   transition: transform 0.1s ease;
 }
+.download-btn {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+}
+
+.download-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+.file-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #10b981, #059669);
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  max-width: 180px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.file-upload span {
+  color: #ffffff !important;  /* FORCE WHITE TEXT */
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+.file-upload input[type="file"] {
+  display: none;
+}

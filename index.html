@@ -27,13 +27,15 @@
 
       <br /><br />
 
-      <label>Upload Image:</label>
-      <input type="file" id="imageUpload" accept="image/*" />
-
       <label>Image Size:</label>
       <input type="range" id="imageSize" min="100" max="1000" value="300" />
 
-      <button onclick="downloadImage()">Download</button>
+      <label class="file-upload">
+        <input type="file" id="imageUpload" accept="image/*" />
+        <span>Choose Image</span>
+      </label>
+
+      <button class="download-btn" onclick="downloadImage()">Download</button>
     </div>
     <!-- CANVAS -->
     <div id="canvasWrapper">
